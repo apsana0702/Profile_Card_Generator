@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+
+<body> 
+        <!-- Generated Profile Card -->
+        <div class="profile-card" [@fadeIn]>
+            <img [src]="profilePicture || 'https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg'" 
+                 alt="Profile Picture">
+            <h3>{{ name }}</h3>
+            <h4>{{ designation }}</h4>
+            <p>{{ description }}</p>
+            <p *ngIf="contact.phone"><strong>Mobile:</strong> {{ contact.phone }}</p>
+            <p *ngIf="contact.email">
+                <strong>Email:</strong>
+                <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+            </p>
+          </div>
+           
+</body>
+
+</html>

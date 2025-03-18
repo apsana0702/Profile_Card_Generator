@@ -1,0 +1,159 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); */
+
+.content{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: rgb(8, 8, 8) 4px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+} 
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #3a3d40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+/* --- Slider at Top --- */
+.slider-container {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: inline-block;
+    font-size: 20px;
+    /* font-weight: bold; */
+    padding: 2px;
+    background: linear-gradient(80deg, #ff758c, #ff7eb3);
+    color: white;
+    border-radius: 8px;
+    animation: slideText 3s infinite linear alternate;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+@keyframes slideText {
+    0% { transform: translateX(-40%); }
+    100% { transform: translateX(40%); }
+}
+
+/* --- Container Styling --- */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 900px;
+    min-height: 60vh;
+    /* max-height: 80vh; */
+    width: 100%;
+    backdrop-filter: blur(10px);
+    color: white;
+    border: aqua 2px solid;
+}
+
+h2 {
+    margin-bottom: 10px;
+    margin: 2px;
+    color: #1f1f1f;
+}
+
+/* --- Side-by-Side Layout --- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+/* --- Form Styling --- */
+.form-section {
+    flex: 1;
+    max-width: 40%;
+    padding-left: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    max-height: fit-content;
+}
+
+.form-section:hover {
+    transform: scale(1.05);
+}
+
+form label {
+    display: block;
+    margin: 3px 0 5px;
+    font-weight: 600;
+    color: black;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Light border */
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+button {
+    width: 100%;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff5f7e, #ff4e6a);
+    transform: scale(1.05);
+}
+
+/* --- Profile Card Section --- */
+app-profile-card {
+    flex: 1;
+    max-width: 45%;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section, app-profile-card {
+        max-width: 100%;
+    }
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Light gray */
+}
