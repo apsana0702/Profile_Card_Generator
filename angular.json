@@ -13,9 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/profile-card-app",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/Profile_Card_Generator/",
             "polyfills": [
               "zone.js"
             ],
